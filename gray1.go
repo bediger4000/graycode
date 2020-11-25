@@ -31,13 +31,11 @@ func main() {
 	for bitNo := 0; bitNo < bits; bitNo++ {
 		vertical := intpower(2, bitNo+1)
 
-		if bitNo > 0 {
-			// Mirror the existing bits, which will only be
-			// initialized for the first vertical/2 values
-			for i, j := 0, vertical-1; i < j; i, j = i+1, j-1 {
-				for k := 0; k < bitNo; k++ {
-					values[j][k] = values[i][k]
-				}
+		// Mirror the existing bits, which will only be
+		// initialized for the first vertical/2 values
+		for i, j := 0, vertical-1; i < j; i, j = i+1, j-1 {
+			for k := 0; k < bitNo; k++ {
+				values[j][k] = values[i][k]
 			}
 		}
 

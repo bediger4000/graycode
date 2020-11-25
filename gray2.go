@@ -25,12 +25,10 @@ func main() {
 	for bitNo := 0; bitNo < bits; bitNo++ {
 		vertical := intpower(2, bitNo+1)
 
-		if bitNo > 0 {
-			// Mirror the existing bits, which will only be
-			// initialized for the first vertical/2 values
-			for i, j := 0, vertical-1; i < j; i, j = i+1, j-1 {
-				values[j] = values[i]
-			}
+		// Mirror the existing bits, which will only be
+		// initialized for the first vertical/2 values
+		for i, j := 0, vertical-1; i < j; i, j = i+1, j-1 {
+			values[j] = values[i]
 		}
 
 		// Fill in top half of the current column of bits with zeros,
