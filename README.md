@@ -52,6 +52,11 @@ one starting at 2^m and decrementing.
 Looping stops when the decrementing index gets to less than or
 equal to the incrementing index.
 
+I tried this with 2 data structures:
+
+1. [one Go byte](gray1.go) per conceptual bit
+2. [one Go integer bit](gray2.go) per conceptual bit
+
 ## Interview Analysis
 
 This problem seems difficult for a "medium" rating.
@@ -60,7 +65,13 @@ of people are going to know off the top of their heads.
 Getting past that is the first hurdle.
 
 Choice of data structure could affect how easy the code
-is to write: I chose a slice-of-slices,
-with a Go `byte` holding each conceptual bit vale.
+is to write: I tried a slice-of-slices,
+with a Go `byte` holding each conceptual bit vale,
+and a slice of unsigned integers,
+with each bit in an unsigned integer for a conceptual bit.
+There's not a lot of difference to the variants.
 
-
+A candidate can get hung up on the integer arithmetic rounding problem.
+An algorithm could look correct to a human,
+but give incomprehensible output based on rounding 1/2 or 4/8 or 32/64 to zero.
+I think this problem exists regardless of the data structure chosen.
