@@ -17,7 +17,7 @@ I went with the classic Gray Code algorithm:
 
 1. Reflect the current bits, giving twice as many values, albeit 2 of each.
 2. Add a new bit to each value, 0-value bits to the top half,
-1-value bits to the bottom half, which was reflected in step 1.
+1-value bits to the bottom, the part reflected in step 1.
 
 The first few steps go like this:
 
