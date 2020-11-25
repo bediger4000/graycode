@@ -62,7 +62,16 @@ I tried this with 2 data structures:
 This problem seems difficult for a "medium" rating.
 Generating Gray Codes via algorithms isn't something that a lot
 of people are going to know off the top of their heads.
+I used what I remember as "Gray Code Classic",
+but I didn't google for an algorithm,
+and I know there's several.
 Getting past that is the first hurdle.
+
+A candidate can get hung up on the integer arithmetic rounding problem.
+An algorithm could look correct to a human,
+but give incomprehensible output based on rounding 1/2 or 4/8 or 32/64 to zero.
+I think this problem exists regardless of the data structure chosen.
+This is also one of those mistakes that even experienced developers make.
 
 Choice of data structure could affect how easy the code
 is to write: I tried a slice-of-slices,
@@ -71,7 +80,18 @@ and a slice of unsigned integers,
 with each bit in an unsigned integer for a conceptual bit.
 There's not a lot of difference to the variants.
 
-A candidate can get hung up on the integer arithmetic rounding problem.
-An algorithm could look correct to a human,
-but give incomprehensible output based on rounding 1/2 or 4/8 or 32/64 to zero.
-I think this problem exists regardless of the data structure chosen.
+Aside from generation algorithm,
+and a facet of computer integer arithmetic that everyone
+forgets and then has trouble with,
+this isn't a bad problem if the interviewer wants to see
+the candidate write some code.
+There's an algorithm, a choice of data structure,
+looping, maybe with multiple indexes,
+and possibly bitwise operations.
+There's enough variables involved that the candidate's
+skill in naming gets exercized.
+
+If the interviewer is willing to give away a Gray Code
+generation algorithm,
+this could be a really good coding problem for a mid-
+or senior-level developer.
