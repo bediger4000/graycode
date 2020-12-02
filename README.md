@@ -75,7 +75,7 @@ This is also one of those mistakes that even experienced developers make.
 
 Choice of data structure could affect how easy the code
 is to write: I tried a slice-of-slices,
-with a Go `byte` holding each conceptual bit vale,
+with a Go `byte` holding each conceptual bit value,
 and a slice of unsigned integers,
 with each bit in an unsigned integer for a conceptual bit.
 There's not a lot of difference to the variants.
