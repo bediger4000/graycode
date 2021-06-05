@@ -40,7 +40,7 @@ func main() {
 		}
 	}
 
-	// Output of the 2^N values. Since bits get kept as Go bytes
+	// Output of the 2^N values. Since bits get kept as Go uints
 	// there's a little bit of work to make human readable output.
 	format := fmt.Sprintf("%%0%db\n", bits)
 	for i := 0; i < valueCount; i++ {
@@ -49,7 +49,7 @@ func main() {
 }
 
 // intpower raises base to the exponent via integer
-// multiplication. Exists merely for the convenience.
+// multiplication. Exists merely for convenience.
 func intpower(base, exponent int) int {
 	retval := 1
 	for i := 0; i < exponent; i++ {
