@@ -64,7 +64,7 @@ Generating Gray Codes via algorithms isn't something that a lot
 of people are going to know off the top of their heads.
 I used what I remember as "Gray Code Classic",
 but I didn't google for an algorithm,
-and I know there's several.
+and I know there are several.
 Getting past that is the first hurdle.
 
 A candidate can get hung up on the integer arithmetic rounding problem.
@@ -79,6 +79,11 @@ with a Go `byte` holding each conceptual bit value,
 and a slice of unsigned integers,
 with each bit in an unsigned integer for a conceptual bit.
 There's not a lot of difference to the variants.
+
+The issue with this algorithm is that it creates all the gray code
+values before output,
+using O(bits) of space.
+For larger numbers of bits, that could be a lot of allocated memory.
 
 Aside from generation algorithm,
 and a facet of computer integer arithmetic that everyone
